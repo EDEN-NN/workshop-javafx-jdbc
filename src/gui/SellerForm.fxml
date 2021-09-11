@@ -26,28 +26,31 @@
             <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="81.0" minHeight="0.0" prefHeight="46.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="62.0" minHeight="6.0" prefHeight="52.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label text="Id" />
             <Label text="Name" GridPane.rowIndex="1" />
-            <TextField fx:id="txtId" editable="false" GridPane.columnIndex="1" />
-            <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label fx:id="labelErrorName" textFill="#da2a0b" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <HBox prefHeight="34.0" prefWidth="200.0" spacing="5.0" />
             <Label text="Email" GridPane.rowIndex="2" />
             <Label text="Birth Date" GridPane.rowIndex="3" />
             <Label text="Base Salary" GridPane.rowIndex="4" />
             <Label text="Department" GridPane.rowIndex="5" />
+            <TextField fx:id="txtId" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="txtBaseSalary" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <DatePicker fx:id="dpBirthDate" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtBaseSalary" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="comboBoxDepartment" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <HBox prefHeight="34.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <Button fx:id="btSave" lineSpacing="5.0" mnemonicParsing="false" onAction="#onBtSaveAction" prefHeight="17.0" prefWidth="66.0" text="Save" />
+                  <Button fx:id="btCancel" lineSpacing="5.0" mnemonicParsing="false" onAction="#onBtCancelAction" prefHeight="25.0" prefWidth="66.0" text="Cancel" />
+               </children></HBox>
+            <Label fx:id="labelErrorName" textFill="#da2a0b" GridPane.columnIndex="2" GridPane.rowIndex="1" />
             <Label fx:id="labelErrorEmail" textFill="#d30d0d" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             <Label fx:id="labelErrorBirthDate" textFill="#f22727" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <Label fx:id="labelErrorBaseSalary" textFill="#e10a0a" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <ComboBox fx:id="comboBoxDepartment" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
-      <Button fx:id="btCancel" layoutX="196.0" layoutY="252.0" lineSpacing="5.0" mnemonicParsing="false" onAction="#onBtCancelAction" text="Cancel" />
-      <Button fx:id="btSave" layoutX="109.0" layoutY="252.0" lineSpacing="5.0" mnemonicParsing="false" onAction="#onBtSaveAction" prefHeight="17.0" prefWidth="66.0" text="Save" />
    </children>
 </AnchorPane>
